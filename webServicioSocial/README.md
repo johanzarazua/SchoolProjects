@@ -11,9 +11,15 @@ dinamica
 
 ## COTENIDO DEL PROYECTO
 
-EL proyecto cuenta con los siguientes archivos
+El proyecto cuenta con los siguientes archivos
+
 | Nombre del archivo | Descripción |
 |--------------------|-------------|
 | index.html | Pagina principal con informacion sobre proceso para realizaer SS |
 | sidebar.css | Archivo de estilos para los elementos de la pagina principal |
 | sidebar.js | Archivo js para dar funcionalidad a algunos elementos de la pagina |
+
+
+## VISTA PREVIA
+
+![Vista Previa](img/indexVP.png)
