@@ -1,0 +1,203 @@
+body{
+	font-family: 'Montserrat', sans-serif;
+}
+h1{font-size: 66px; font-weight: 600; line-height: 200px; color: rgb(22,21,35);}
+h2{font-size: 46px; margin-bottom: 30px; color: rgb(22,21,35);}
+h3{font-size: 26px; margin-bottom: 20px; color: rgb(22,21,35);}
+p{font-size: 18px; line-height: 1.8; color: rgb(22,21,35);margin-bottom: 0px;}
+
+section{padding: 110px 0;}
+.topmargin-xs{ margin-top: 15px;}
+.topmargin-sm{ margin-top: 30px;}
+.topmargin-lg{ margin-top: 60px;}
+.bottommargin-xs{ margin-bottom: 15px;}
+.bottommargin-sm{ margin-bottom: 30px;}
+.bottommargin-lg{ margin-bottom: 60px;}
+.bd-light{ background-color: #e7e7f0;}
+.bd-f{ background-color: #161523;}
+
+/* MENU */
+.navbar{
+	background-color:  rgb(22,21,35) !important;
+}
+.navbar-brand .logo-brand{
+	width: 50px;
+}
+.navbar .navbar-nav li a{
+	color: rgba(255,227,171,0.85) !important;
+}
+.navbar .nav-item .nav-link:hover{
+	color: rgba(230, 184, 92, 0.9) !important;
+}
+.navbar .nav-item .dropdown-menu .dropdown-item{
+	color: rgb(22,21,35) !important;
+}
+.navbar .nav-item .dropdown-menu .dropdown-item:hover{
+	color: rgba(230, 184, 92, 0.9) !important;
+	background-color: rgb(22,21,35);
+	opacity: 0.65;
+}
+.navbar-toggler{
+	border: none;
+}
+.navbar-toggler:focus{outline: none;}
+.navbar-toggler .navbar-toggler-icon{
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='	rgb(255, 227, 171)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+/* BANNER */
+#banner{
+	background-image: url('../imagenes/SanMiguelA.jpg');
+	background-size: cover;
+	min-height: 700px;
+	margin-top: 80px;
+}
+
+
+/* PORTAFOLIO */
+.content-center{
+	max-width: 800px;
+	margin: 0 auto 60px auto;
+	text-align: center;
+}
+.portfolio-container{
+	position: relative;
+	overflow: hidden;
+	margin: 15px 0px;
+	border-radius: 2px;
+}
+.portfolio-details{
+	position: absolute;
+	bottom: 25px;
+	left: 16px;
+	z-index: 900;
+}
+.portfolio-details p {
+    font-size: x-large;
+	background-color: rgba(22, 21, 35, 0.01);
+	color: #e7e7f0;
+}
+.portfolio-detailss{
+	margin: 0px 60px 60px 30px;
+}
+.portfolio-detailss h2{
+	text-align: center;
+	font-size: 35px;
+}
+.portfolio-detailss p{
+	font-size: 20px;
+}
+.col-md-6{
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+.col-md-4{
+	margin-bottom: 40px;
+}
+.row{
+	margin: 30px 100px;
+}
+
+/* Habitaciones */
+.hab-container{
+	position: relative;
+	overflow: hidden;
+	margin: 15px 0px;
+	border-radius: 2px;
+}
+	/*animacion de iamgen*/
+.hab-container img{
+	-moz-transition: all 0.8s;
+	-webkit-transition: all 0.8s;
+	transition: all 0.8s;
+}
+.hab-container:hover img{
+	-moz-transform: scale(1.2);
+	-webkit-transform: scale(1.2);
+	transform: scale(1.2);
+}
+
+/* Formulario */
+.form-signin{
+	max-width: 380px;
+	margin: 0 auto;
+	border: 2px solid rgb(22,21,35);
+	padding: 15px 40px 50px;
+	border-radius: 15px;
+	box-shadow: 0 0 20px 1px rgba(0,0,0,0.8);
+	background-color: rgb(22,21,35);
+}
+.form-signin h2 , .form-signin label, .form-signin a{
+	color: rgba(255,227,171,0.85);
+}
+.form-signin h2{
+	font-size: 35px;
+}
+.form-signin a:hover{
+	color: rgba(230, 184, 92, 0.9);
+}
+
+
+.man-container a:hover{
+	color: rgb(22,21,35);
+}
+
+#mantenimiento .col-md-6 .man-container .text-center h2{
+	border-bottom: 1px solid rgb(187, 187, 187);
+}
+#mantenimiento .col-md-6 .man-container a:hover{
+	color: rgb(22,21,35);
+}
+
+#footer .container .content-center p{
+	color: rgba(255,227,171,0.85);
+}
+
+
+/* Smatphone s a Tablet*/
+@media (max-width: 767.98px) {
+	#banner{min-height: 200px;}
+	section{padding: 50px 0;}
+	h1{font-size: 40px; line-height: normal;}
+	h2{font-size: 20px; line-height: normal; margin-bottom: 15px;}
+	h3{font-size: 15px; line-height: normal; margin-bottom: 10px;}
+	.content-center img{width: 25px;}
+	.portfolio-details{bottom: 15px;}
+	.portfolio-details #ag{margin-bottom: 28px;}
+	.portfolio-details p{font-size: x-large;}
+	.portfolio-detailss{margin: 0px 15px 0px 15px;}
+	.portfolio-detailss h2{font-size: 16px;}
+	.portfolio-detailss p{font-size: 14px;}
+	.col-md-6{margin: 10px 0px 10px 0px;}
+	.row{margin: 15px -10px;}
+}
+
+/* Tablet  a Laptop*/
+@media (min-width: 768px) and (max-width: 991.98px) { 
+	#banner{min-height: 400px;}
+	section{padding: 70px 0;}
+	h1{font-size: 45px; line-height: normal;}
+	h2{font-size: 30px; line-height: normal; margin-bottom: 15px;}
+	h3{font-size: 15px; line-height: normal; margin-bottom: 10px;}
+	.content-center img{width: 30px;}
+	.portfolio-details{bottom: 30px;}
+	.portfolio-details p{font-size: 20px;}
+	.portfolio-detailss{margin: 0px 25px 0px 25px;}
+	.portfolio-detailss h2{font-size: 22px;}
+	.portfolio-detailss p{font-size: 13px;}
+	.col-md-6{margin: 10px 0px 10px 0px;}
+	.col-md-4{font-size: 13px;}
+	.row{margin: 15px -10px;}
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+	h2{font-size: 40px; line-height: normal; margin-bottom: 15px;}
+	.portfolio-details{bottom: 30px;}
+	.portfolio-details p{font-size: 20px;}
+	.portfolio-detailss{margin: 0px 25px 0px 25px;}
+	.portfolio-detailss h2{font-size: 22px;}
+	.portfolio-detailss p{font-size: 13px;}
+	.col-md-4{font-size: 13px;}
+}
+
+@media (min-width: 1200px) { ... }
