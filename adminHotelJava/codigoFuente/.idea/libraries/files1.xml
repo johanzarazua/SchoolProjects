@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="files1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/build/classes/hotel/files/jcalendar-1.3.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/classes/hotel/files/mysql-connector-java-8.0.18.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/classes/hotel/files/itextpdf-5.4.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

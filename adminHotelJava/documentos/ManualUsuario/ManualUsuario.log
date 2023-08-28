@@ -1,0 +1,506 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.6.9)  20 NOV 2019 10:12
+entering extended mode
+**ManualUsuario.tex
+(C:\Users\Efren\Desktop\ManualUsuario\ManualUsuario.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
+ lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
+german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
+ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
+an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
+ishmax, welsh, loaded.
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size12.clo"
+File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\fontenc.sty"
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.def"
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count87
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(C:\Users\Efren\Desktop\ManualUsuario\ManualUsuario.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+
+<imagenes/unam.png, id=1, 225.84375pt x 224.84pt>
+File: imagenes/unam.png Graphic file (type png)
+ <use imagenes/unam.png>
+Package pdftex.def Info: imagenes/unam.png used on input line 9.
+(pdftex.def)             Requested size: 78.24507pt x 77.89923pt.
+
+<imagenes/fac.png, id=2, 205.76875pt x 246.9225pt>
+File: imagenes/fac.png Graphic file (type png)
+ <use imagenes/fac.png>
+Package pdftex.def Info: imagenes/fac.png used on input line 9.
+(pdftex.def)             Requested size: 71.13188pt x 85.3579pt.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 14.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
+File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+) [1
+
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/Efren/Desktop/Ma
+nualUsuario/imagenes/unam.png> <C:/Users/Efren/Desktop/ManualUsuario/imagenes/f
+ac.png>]
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 54.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1cmss.fd"
+File: t1cmss.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+<imagenes/crearUsuario1.png, id=11, 594.72188pt x 469.755pt>
+File: imagenes/crearUsuario1.png Graphic file (type png)
+
+<use imagenes/crearUsuario1.png>
+Package pdftex.def Info: imagenes/crearUsuario1.png used on input line 66.
+(pdftex.def)             Requested size: 284.52756pt x 224.73438pt.
+ [2]
+<imagenes/crearUsuario2.png, id=18, 494.59781pt x 249.18094pt>
+File: imagenes/crearUsuario2.png Graphic file (type png)
+
+<use imagenes/crearUsuario2.png>
+Package pdftex.def Info: imagenes/crearUsuario2.png used on input line 74.
+(pdftex.def)             Requested size: 284.52756pt x 143.34634pt.
+ [3 <C:/Users/Efren/Desktop/ManualUsuario/imagenes/crearUsuario1.png> <C:/Users
+/Efren/Desktop/ManualUsuario/imagenes/crearUsuario2.png>] <imagenes/crearUsuari
+o3.png, id=24, 268.75406pt x 52.69687pt>
+File: imagenes/crearUsuario3.png Graphic file (type png)
+
+<use imagenes/crearUsuario3.png>
+Package pdftex.def Info: imagenes/crearUsuario3.png used on input line 82.
+(pdftex.def)             Requested size: 284.52756pt x 55.79005pt.
+
+<imagenes/cambio.png, id=25, 531.48563pt x 166.37157pt>
+File: imagenes/cambio.png Graphic file (type png)
+
+<use imagenes/cambio.png>
+Package pdftex.def Info: imagenes/cambio.png used on input line 94.
+(pdftex.def)             Requested size: 284.52756pt x 89.06755pt.
+ <imagenes/icono.png, id=26, 173.14688pt x 66.2475pt>
+File: imagenes/icono.png Graphic file (type png)
+
+<use imagenes/icono.png>
+Package pdftex.def Info: imagenes/icono.png used on input line 102.
+(pdftex.def)             Requested size: 284.52756pt x 108.87605pt.
+ [4 <C:/Users/Efren/Desktop/ManualUsuario/imagenes/crearUsuario3.png> <C:/Users
+/Efren/Desktop/ManualUsuario/imagenes/cambio.png> <C:/Users/Efren/Desktop/Manua
+lUsuario/imagenes/icono.png>]
+<imagenes/connection.png, id=31, 195.73125pt x 41.4047pt>
+File: imagenes/connection.png Graphic file (type png)
+
+<use imagenes/connection.png>
+Package pdftex.def Info: imagenes/connection.png used on input line 110.
+(pdftex.def)             Requested size: 213.39566pt x 45.14409pt.
+
+<imagenes/usuario.png, id=32, 666.99188pt x 446.41782pt>
+File: imagenes/usuario.png Graphic file (type png)
+
+<use imagenes/usuario.png>
+Package pdftex.def Info: imagenes/usuario.png used on input line 115.
+(pdftex.def)             Requested size: 284.52756pt x 190.43689pt.
+
+<imagenes/Johan1.png, id=33, 1031.35312pt x 549.55313pt>
+File: imagenes/Johan1.png Graphic file (type png)
+
+<use imagenes/Johan1.png>
+Package pdftex.def Info: imagenes/Johan1.png used on input line 123.
+(pdftex.def)             Requested size: 284.52756pt x 151.60974pt.
+ [5 <C:/Users/Efren/Desktop/ManualUsuario/imagenes/connection.png> <C:/Users/Ef
+ren/Desktop/ManualUsuario/imagenes/usuario.png>]
+<imagenes/Johan2.png, id=37, 223.58531pt x 356.83313pt>
+File: imagenes/Johan2.png Graphic file (type png)
+
+<use imagenes/Johan2.png>
+Package pdftex.def Info: imagenes/Johan2.png used on input line 131.
+(pdftex.def)             Requested size: 113.81102pt x 181.63945pt.
+ [6 <C:/Users/Efren/Desktop/ManualUsuario/imagenes/Johan1.png> <C:/Users/Efren/
+Desktop/ManualUsuario/imagenes/Johan2.png>]
+<imagenes/Johan3.png, id=43, 850.67813pt x 444.91219pt>
+File: imagenes/Johan3.png Graphic file (type png)
+
+<use imagenes/Johan3.png>
+Package pdftex.def Info: imagenes/Johan3.png used on input line 139.
+(pdftex.def)             Requested size: 284.52756pt x 148.8106pt.
+
+<imagenes/Johan4.png, id=44, 847.66687pt x 450.9347pt>
+File: imagenes/Johan4.png Graphic file (type png)
+
+<use imagenes/Johan4.png>
+Package pdftex.def Info: imagenes/Johan4.png used on input line 144.
+(pdftex.def)             Requested size: 284.52756pt x 151.36165pt.
+ <imagenes/Johan5.png, id=45, 852.93657pt x 457.71pt>
+File: imagenes/Johan5.png Graphic file (type png)
+
+<use imagenes/Johan5.png>
+Package pdftex.def Info: imagenes/Johan5.png used on input line 149.
+(pdftex.def)             Requested size: 284.52756pt x 152.68602pt.
+ [7 <C:/Users/Efren/Desktop/ManualUsuario/imagenes/Johan3.png> <C:/Users/Efren/
+Desktop/ManualUsuario/imagenes/Johan4.png> <C:/Users/Efren/Desktop/ManualUsuari
+o/imagenes/Johan5.png>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 165.
+
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 165.
+ [8]
+<imagenes/1.png, id=58, 385.44pt x 530.98375pt>
+File: imagenes/1.png Graphic file (type png)
+ <use imagenes/1.png>
+Package pdftex.def Info: imagenes/1.png used on input line 179.
+(pdftex.def)             Requested size: 220.50885pt x 303.77386pt.
+ [9 <C:/Users/Efren/Desktop/ManualUsuario/imagenes/1.png>]
+<imagenes/2.png, id=63, 327.2225pt x 137.51375pt>
+File: imagenes/2.png Graphic file (type png)
+ <use imagenes/2.png>
+Package pdftex.def Info: imagenes/2.png used on input line 185.
+(pdftex.def)             Requested size: 220.50885pt x 92.66669pt.
+
+<imagenes/4.png, id=64, 324.21124pt x 139.52126pt>
+File: imagenes/4.png Graphic file (type png)
+ <use imagenes/4.png>
+Package pdftex.def Info: imagenes/4.png used on input line 194.
+(pdftex.def)             Requested size: 220.50885pt x 94.89447pt.
+
+<imagenes/3.png, id=65, 577.15625pt x 88.33pt>
+File: imagenes/3.png Graphic file (type png)
+ <use imagenes/3.png>
+Package pdftex.def Info: imagenes/3.png used on input line 199.
+(pdftex.def)             Requested size: 362.77263pt x 55.52283pt.
+ [10 <C:/Users/Efren/Desktop/ManualUsuario/imagenes/2.png> <C:/Users/Efren/Desk
+top/ManualUsuario/imagenes/4.png> <C:/Users/Efren/Desktop/ManualUsuario/imagene
+s/3.png>]
+<imagenes/5.png, id=72, 591.20876pt x 87.32625pt>
+File: imagenes/5.png Graphic file (type png)
+ <use imagenes/5.png>
+Package pdftex.def Info: imagenes/5.png used on input line 204.
+(pdftex.def)             Requested size: 362.77263pt x 53.58606pt.
+
+<imagenes/6.png, id=73, 587.19376pt x 88.33pt>
+File: imagenes/6.png Graphic file (type png)
+ <use imagenes/6.png>
+Package pdftex.def Info: imagenes/6.png used on input line 209.
+(pdftex.def)             Requested size: 362.77263pt x 54.57129pt.
+
+<imagenes/7.png, id=74, 347.2975pt x 359.3425pt>
+File: imagenes/7.png Graphic file (type png)
+ <use imagenes/7.png>
+Package pdftex.def Info: imagenes/7.png used on input line 219.
+(pdftex.def)             Requested size: 220.50885pt x 228.1635pt.
+ [11 <C:/Users/Efren/Desktop/ManualUsuario/imagenes/5.png> <C:/Users/Efren/Desk
+top/ManualUsuario/imagenes/6.png>] <imagenes/8.png, id=80, 328.22626pt x 137.51
+375pt>
+File: imagenes/8.png Graphic file (type png)
+
+<use imagenes/8.png>
+Package pdftex.def Info: imagenes/8.png used on input line 225.
+(pdftex.def)             Requested size: 220.50885pt x 92.38553pt.
+ <imagenes/9.png, id=81, 299.1175pt x 137.51375pt>
+File: imagenes/9.png Graphic file (type png)
+
+<use imagenes/9.png>
+Package pdftex.def Info: imagenes/9.png used on input line 232.
+(pdftex.def)             Requested size: 220.50885pt x 101.3767pt.
+ [12 <C:/Users/Efren/Desktop/ManualUsuario/imagenes/7.png> <C:/Users/Efren/Desk
+top/ManualUsuario/imagenes/8.png>]
+<imagenes/10.png, id=87, 290.08376pt x 139.52126pt>
+File: imagenes/10.png Graphic file (type png)
+ <use imagenes/10.png>
+Package pdftex.def Info: imagenes/10.png used on input line 237.
+(pdftex.def)             Requested size: 220.50885pt x 106.05853pt.
+
+<imagenes/11.png, id=88, 457.71pt x 83.31125pt>
+File: imagenes/11.png Graphic file (type png)
+ <use imagenes/11.png>
+Package pdftex.def Info: imagenes/11.png used on input line 242.
+(pdftex.def)             Requested size: 362.77263pt x 66.0338pt.
+
+<imagenes/12.png, id=89, 461.725pt x 73.27374pt>
+File: imagenes/12.png Graphic file (type png)
+ <use imagenes/12.png>
+Package pdftex.def Info: imagenes/12.png used on input line 247.
+(pdftex.def)             Requested size: 362.77263pt x 57.57031pt.
+ [13 <C:/Users/Efren/Desktop/ManualUsuario/imagenes/9.png> <C:/Users/Efren/Desk
+top/ManualUsuario/imagenes/10.png> <C:/Users/Efren/Desktop/ManualUsuario/imagen
+es/11.png>] <imagenes/13.png, id=97, 458.71375pt x 73.27374pt>
+File: imagenes/13.png Graphic file (type png)
+ <use imagenes/13.png>
+Package pdftex.def Info: imagenes/13.png used on input line 253.
+(pdftex.def)             Requested size: 362.77263pt x 57.95045pt.
+
+<imagenes/14.png, id=98, 262.9825pt x 137.51375pt>
+File: imagenes/14.png Graphic file (type png)
+ <use imagenes/14.png>
+Package pdftex.def Info: imagenes/14.png used on input line 258.
+(pdftex.def)             Requested size: 220.50885pt x 115.30933pt.
+
+<imagenes/15.png, id=99, 451.6875pt x 51.19125pt>
+File: imagenes/15.png Graphic file (type png)
+ <use imagenes/15.png>
+Package pdftex.def Info: imagenes/15.png used on input line 263.
+(pdftex.def)             Requested size: 362.77263pt x 41.11629pt.
+
+[14 <C:/Users/Efren/Desktop/ManualUsuario/imagenes/12.png> <C:/Users/Efren/Desk
+top/ManualUsuario/imagenes/13.png> <C:/Users/Efren/Desktop/ManualUsuario/imagen
+es/14.png> <C:/Users/Efren/Desktop/ManualUsuario/imagenes/15.png>]
+<imagenes/cliente.png, id=107, 322.95656pt x 446.41782pt>
+File: imagenes/cliente.png Graphic file (type png)
+
+<use imagenes/cliente.png>
+Package pdftex.def Info: imagenes/cliente.png used on input line 274.
+(pdftex.def)             Requested size: 220.50885pt x 304.80664pt.
+
+<imagenes/e_cliente.png, id=108, 259.7203pt x 109.91063pt>
+File: imagenes/e_cliente.png Graphic file (type png)
+
+<use imagenes/e_cliente.png>
+Package pdftex.def Info: imagenes/e_cliente.png used on input line 284.
+(pdftex.def)             Requested size: 220.50885pt x 93.31544pt.
+ [15 <C:/Users/Efren/Desktop/ManualUsuario/imagenes/cliente.png>] <imagenes/con
+tra.png, id=112, 313.17pt x 109.91063pt>
+File: imagenes/contra.png Graphic file (type png)
+
+<use imagenes/contra.png>
+Package pdftex.def Info: imagenes/contra.png used on input line 292.
+(pdftex.def)             Requested size: 220.50885pt x 77.39307pt.
+
+<imagenes/telefono.png, id=113, 283.81032pt x 109.91063pt>
+File: imagenes/telefono.png Graphic file (type png)
+
+<use imagenes/telefono.png>
+Package pdftex.def Info: imagenes/telefono.png used on input line 295.
+(pdftex.def)             Requested size: 220.50885pt x 85.39954pt.
+
+<imagenes/r_cliente.png, id=114, 217.5628pt x 109.91063pt>
+File: imagenes/r_cliente.png Graphic file (type png)
+
+<use imagenes/r_cliente.png>
+Package pdftex.def Info: imagenes/r_cliente.png used on input line 302.
+(pdftex.def)             Requested size: 220.50885pt x 111.40631pt.
+ [16 <C:/Users/Efren/Desktop/ManualUsuario/imagenes/e_cliente.png> <C:/Users/Ef
+ren/Desktop/ManualUsuario/imagenes/contra.png> <C:/Users/Efren/Desktop/ManualUs
+uario/imagenes/telefono.png> <C:/Users/Efren/Desktop/ManualUsuario/imagenes/r_c
+liente.png>]
+<imagenes/re_cliente.png, id=118, 365.86688pt x 405.76593pt>
+File: imagenes/re_cliente.png Graphic file (type png)
+
+<use imagenes/re_cliente.png>
+Package pdftex.def Info: imagenes/re_cliente.png used on input line 309.
+(pdftex.def)             Requested size: 220.50885pt x 244.55733pt.
+ [17 <C:/Users/Efren/Desktop/ManualUsuario/imagenes/re_cliente.png>] <imagenes/
+reservacion.png, id=122, 301.125pt x 416.30531pt>
+File: imagenes/reservacion.png Graphic file (type png)
+
+<use imagenes/reservacion.png>
+Package pdftex.def Info: imagenes/reservacion.png used on input line 327.
+(pdftex.def)             Requested size: 220.50885pt x 304.86589pt.
+
+<imagenes/reserva_cliente.png, id=123, 812.28468pt x 437.38406pt>
+File: imagenes/reserva_cliente.png Graphic file (type png)
+
+<use imagenes/reserva_cliente.png>
+Package pdftex.def Info: imagenes/reserva_cliente.png used on input line 334.
+(pdftex.def)             Requested size: 220.50885pt x 118.7293pt.
+ [18 <C:/Users/Efren/Desktop/ManualUsuario/imagenes/reservacion.png>]
+File: imagenes/reserva_cliente.png Graphic file (type png)
+ <use imagenes/reserva_cliente.png>
+Package pdftex.def Info: imagenes/reserva_cliente.png used on input line 337.
+(pdftex.def)             Requested size: 220.50885pt x 118.7293pt.
+
+<imagenes/fecha.png, id=127, 292.84406pt x 198.7425pt>
+File: imagenes/fecha.png Graphic file (type png)
+
+<use imagenes/fecha.png>
+Package pdftex.def Info: imagenes/fecha.png used on input line 344.
+(pdftex.def)             Requested size: 220.50885pt x 149.65694pt.
+ [19 <C:/Users/Efren/Desktop/ManualUsuario/imagenes/reserva_cliente.png> <C:/Us
+ers/Efren/Desktop/ManualUsuario/imagenes/fecha.png>]
+File: imagenes/fecha.png Graphic file (type png)
+
+<use imagenes/fecha.png>
+Package pdftex.def Info: imagenes/fecha.png used on input line 354.
+(pdftex.def)             Requested size: 220.50885pt x 149.65694pt.
+
+<imagenes/trabajador.png, id=132, 325.96782pt x 458.46281pt>
+File: imagenes/trabajador.png Graphic file (type png)
+
+<use imagenes/trabajador.png>
+Package pdftex.def Info: imagenes/trabajador.png used on input line 369.
+(pdftex.def)             Requested size: 220.50885pt x 310.14859pt.
+ [20]
+<imagenes/lis_trabajador.png, id=136, 374.14781pt x 435.87843pt>
+File: imagenes/lis_trabajador.png Graphic file (type png)
+
+<use imagenes/lis_trabajador.png>
+Package pdftex.def Info: imagenes/lis_trabajador.png used on input line 374.
+(pdftex.def)             Requested size: 220.50885pt x 256.89336pt.
+ [21 <C:/Users/Efren/Desktop/ManualUsuario/imagenes/trabajador.png>]
+<imagenes/hacerpago.png, id=140, 417.81094pt x 392.21532pt>
+File: imagenes/hacerpago.png Graphic file (type png)
+
+<use imagenes/hacerpago.png>
+Package pdftex.def Info: imagenes/hacerpago.png used on input line 390.
+(pdftex.def)             Requested size: 220.50885pt x 207.00534pt.
+ [22 <C:/Users/Efren/Desktop/ManualUsuario/imagenes/lis_trabajador.png>]
+<imagenes/re_pagos.png, id=144, 239.39438pt x 442.65375pt>
+File: imagenes/re_pagos.png Graphic file (type png)
+
+<use imagenes/re_pagos.png>
+Package pdftex.def Info: imagenes/re_pagos.png used on input line 398.
+(pdftex.def)             Requested size: 220.50885pt x 407.73268pt.
+ [23 <C:/Users/Efren/Desktop/ManualUsuario/imagenes/hacerpago.png>] <imagenes/s
+erv.png, id=148, 482.55281pt x 127.22531pt>
+File: imagenes/serv.png Graphic file (type png)
+
+<use imagenes/serv.png>
+Package pdftex.def Info: imagenes/serv.png used on input line 406.
+(pdftex.def)             Requested size: 220.50885pt x 58.13608pt.
+ [24 <C:/Users/Efren/Desktop/ManualUsuario/imagenes/re_pagos.png>] <imagenes/pa
+gos.png, id=152, 483.30562pt x 118.94438pt>
+File: imagenes/pagos.png Graphic file (type png)
+
+<use imagenes/pagos.png>
+Package pdftex.def Info: imagenes/pagos.png used on input line 414.
+(pdftex.def)             Requested size: 220.50885pt x 54.26859pt.
+
+<imagenes/compras.png, id=153, 416.30531pt x 386.19281pt>
+File: imagenes/compras.png Graphic file (type png)
+
+<use imagenes/compras.png>
+Package pdftex.def Info: imagenes/compras.png used on input line 425.
+(pdftex.def)             Requested size: 220.50885pt x 204.55745pt.
+ [25 <C:/Users/Efren/Desktop/ManualUsuario/imagenes/serv.png> <C:/Users/Efren/D
+esktop/ManualUsuario/imagenes/pagos.png>]
+<imagenes/ec.png, id=158, 715.92468pt x 447.17062pt>
+File: imagenes/ec.png Graphic file (type png)
+ <use imagenes/ec.png>
+Package pdftex.def Info: imagenes/ec.png used on input line 433.
+(pdftex.def)             Requested size: 220.50885pt x 137.7276pt.
+
+[26 <C:/Users/Efren/Desktop/ManualUsuario/imagenes/compras.png> <C:/Users/Efren
+/Desktop/ManualUsuario/imagenes/ec.png>]
+<imagenes/nocompra.png, id=162, 469.755pt x 131.74219pt>
+File: imagenes/nocompra.png Graphic file (type png)
+
+<use imagenes/nocompra.png>
+Package pdftex.def Info: imagenes/nocompra.png used on input line 441.
+(pdftex.def)             Requested size: 220.50885pt x 61.84042pt.
+
+<imagenes/comprobante1.png, id=163, 288.3272pt x 170.88844pt>
+File: imagenes/comprobante1.png Graphic file (type png)
+
+<use imagenes/comprobante1.png>
+Package pdftex.def Info: imagenes/comprobante1.png used on input line 448.
+(pdftex.def)             Requested size: 220.50885pt x 130.69794pt.
+
+<imagenes/comprobante2.png, id=164, 474.27188pt x 255.20343pt>
+File: imagenes/comprobante2.png Graphic file (type png)
+
+<use imagenes/comprobante2.png>
+Package pdftex.def Info: imagenes/comprobante2.png used on input line 449.
+(pdftex.def)             Requested size: 220.50885pt x 118.65279pt.
+
+<imagenes/comprobante3.png, id=165, 480.29437pt x 257.46187pt>
+File: imagenes/comprobante3.png Graphic file (type png)
+
+<use imagenes/comprobante3.png>
+Package pdftex.def Info: imagenes/comprobante3.png used on input line 450.
+(pdftex.def)             Requested size: 220.50885pt x 118.20602pt.
+
+<imagenes/comprobante4.png, id=166, 680.5425pt x 428.35031pt>
+File: imagenes/comprobante4.png Graphic file (type png)
+
+<use imagenes/comprobante4.png>
+Package pdftex.def Info: imagenes/comprobante4.png used on input line 451.
+(pdftex.def)             Requested size: 220.50885pt x 138.79388pt.
+ [27 <C:/Users/Efren/Desktop/ManualUsuario/imagenes/nocompra.png>] [28 <C:/User
+s/Efren/Desktop/ManualUsuario/imagenes/comprobante1.png> <C:/Users/Efren/Deskto
+p/ManualUsuario/imagenes/comprobante2.png> <C:/Users/Efren/Desktop/ManualUsuari
+o/imagenes/comprobante3.png> <C:/Users/Efren/Desktop/ManualUsuario/imagenes/com
+probante4.png>]
+(C:\Users\Efren\Desktop\ManualUsuario\ManualUsuario.aux) ) 
+Here is how much of TeX's memory you used:
+ 1345 strings out of 493921
+ 19349 string characters out of 3147283
+ 63118 words of memory out of 3000000
+ 4619 multiletter control sequences out of 15000+200000
+ 10222 words of font info for 25 fonts, out of 3000000 for 9000
+ 841 hyphenation exceptions out of 8191
+ 27i,5n,19p,1188b,268s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Efren\AppD
+ata\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\
+Efren\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss1200.pk> 
+<C:\Users\Efren\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecb
+x1728.pk> <C:\Users\Efren\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\
+dpi600\ecrm1200.pk> <C:\Users\Efren\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jk
+nappen\ec\dpi600\ectt2074.pk> <C:\Users\Efren\AppData\Local\MiKTeX\2.9\fonts\pk
+\ljfour\jknappen\ec\dpi600\ectt2488.pk><C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmsy10.pfb>
+Output written on ManualUsuario.pdf (28 pages, 911447 bytes).
+PDF statistics:
+ 418 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 256 words of extra memory for PDF output out of 10000 (max. 10000000)
+

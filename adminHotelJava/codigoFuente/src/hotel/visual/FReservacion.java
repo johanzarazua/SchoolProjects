@@ -1,0 +1,876 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package hotel.visual;
+
+import hotel.datos.Habitacion;
+import hotel.datos.Reservacion;
+import hotel.logico.CHabitacion;
+import hotel.logico.CReservacion;
+import java.sql.Date;
+import java.time.LocalDate;
+import java.util.Calendar;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
+/**
+ *
+ * @author Efren
+ */
+public class FReservacion extends javax.swing.JInternalFrame implements VentanaRegistros{
+    String accion = "guardar";
+    public static int idtrabajador;
+    /**
+     * Creates new form FReservacion
+     */
+    public FReservacion() {
+        initComponents();
+        mostrar("");
+        inhabilitar();
+    }
+
+    /**
+     * El metodo ocultar columnas nos permite ocultar en la pantalla las columnas con informacion inecesaria
+     * para el registro de una reservacion.
+     */
+    void ocultar_columnas(){
+        tablaReservaciones.getColumnModel().getColumn(1).setMaxWidth(0);
+        tablaReservaciones.getColumnModel().getColumn(1).setMinWidth(0);
+        tablaReservaciones.getColumnModel().getColumn(1).setPreferredWidth(0);
+        tablaReservaciones.getColumnModel().getColumn(3).setMaxWidth(0);
+        tablaReservaciones.getColumnModel().getColumn(3).setMinWidth(0);
+        tablaReservaciones.getColumnModel().getColumn(3).setPreferredWidth(0);
+        tablaReservaciones.getColumnModel().getColumn(5).setMaxWidth(0);
+        tablaReservaciones.getColumnModel().getColumn(5).setMinWidth(0);
+        tablaReservaciones.getColumnModel().getColumn(5).setPreferredWidth(0);
+    }
+    
+    @Override
+    public void inhabilitar() {
+        txtIDReservacion.setEnabled(false);
+        txtIDCliente.setEnabled(false);
+        txtNCliente.setEnabled(false);
+        botonCliente.setVisible(false);
+        txtIDTrabajador.setEnabled(false);
+        txtNTrabajador.setEnabled(false);
+        txtIDHabitacion.setEnabled(false);
+        txtNHabitacion.setEnabled(false);
+        botonHabitacion.setVisible(false);
+        dtTramite.setEnabled(false);
+        dtIngreso.setEnabled(false);
+        dtSalida.setEnabled(false);
+        combEstado.setEnabled(false);
+        txtCosto.setEnabled(false);
+        botonNuevo.setEnabled(true);
+        botonGuardar.setEnabled(false);
+        botonCancelar.setEnabled(false);
+        botonBuscar.setEnabled(true);
+        botonEliminar.setEnabled(false);
+        botonSalir.setEnabled(true);
+        txtIDReservacion.setText("");
+        txtIDCliente.setText("");
+        txtNCliente.setText("");
+        txtIDTrabajador.setText("");
+        txtNTrabajador.setText("");
+        txtIDHabitacion.setText("");
+        txtNHabitacion.setText("");
+    }
+
+    @Override
+    public void habilitar() {
+        txtIDReservacion.setEnabled(false);
+        txtIDCliente.setEnabled(false);
+        txtNCliente.setEnabled(false);
+        botonCliente.setVisible(true);
+        botonCliente.setEnabled(true);
+        
+        txtIDTrabajador.setEnabled(false);
+        txtNTrabajador.setEnabled(false);
+        
+        txtIDHabitacion.setEnabled(false);
+        txtNHabitacion.setEnabled(false);
+        botonHabitacion.setVisible(true);
+        botonHabitacion.setEnabled(true);
+        dtTramite.setEnabled(true);
+        dtIngreso.setEnabled(true);
+        dtSalida.setEnabled(true);
+        combEstado.setEnabled(true);
+        txtCosto.setEnabled(true);
+        botonNuevo.setEnabled(true);
+        botonGuardar.setEnabled(true);
+        botonCancelar.setEnabled(true);
+        botonBuscar.setEnabled(true);
+        botonEliminar.setEnabled(true);
+        botonSalir.setEnabled(true);
+        txtIDReservacion.setText("");
+        txtIDCliente.setText("");
+        txtNCliente.setText("");
+        txtIDHabitacion.setText("");
+        txtNHabitacion.setText("");
+    }
+
+    @Override
+    public void mostrar(String buscar) {
+        try {
+            //se crea una tabla
+            DefaultTableModel modelo;
+            /*se crea un objeto de la clase CServicio para poder operar en la tabla servicio.
+            de la base de datos*/
+            CReservacion cr = new CReservacion();
+            // se almacena la tabla retornada al hacer una consulta en la tabla servicio.
+            modelo = cr.consulta(buscar);
+            //se muestra en la ventana la tabla recibida por la consulta.
+            tablaReservaciones.setModel(modelo);
+            //se obtiene el total de registros existentes en la tabla y se muestra en pantalla
+            lbRegistros.setText("Total Registros: " + Integer.toString(cr.totalregistros));
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(rootPane, e);
+        }
+    }
+
+    
+    /**
+     * This method is called from within the constructor to initialize the form.
+     * WARNING: Do NOT modify this code. The content of this method is always
+     * regenerated by the Form Editor.
+     */
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+        jPanel1 = new javax.swing.JPanel();
+        lbIDServicio = new javax.swing.JLabel();
+        txtIDReservacion = new javax.swing.JTextField();
+        lbTipo = new javax.swing.JLabel();
+        lbDescripcion1 = new javax.swing.JLabel();
+        txtCosto = new javax.swing.JTextField();
+        botonNuevo = new javax.swing.JButton();
+        botonGuardar = new javax.swing.JButton();
+        botonCancelar = new javax.swing.JButton();
+        txtIDCliente = new javax.swing.JTextField();
+        txtIDTrabajador = new javax.swing.JTextField();
+        lbTipo1 = new javax.swing.JLabel();
+        txtIDHabitacion = new javax.swing.JTextField();
+        lbTipo2 = new javax.swing.JLabel();
+        txtNCliente = new javax.swing.JTextField();
+        txtNTrabajador = new javax.swing.JTextField();
+        txtNHabitacion = new javax.swing.JTextField();
+        dtTramite = new com.toedter.calendar.JDateChooser();
+        lbTipo3 = new javax.swing.JLabel();
+        lbTipo4 = new javax.swing.JLabel();
+        dtIngreso = new com.toedter.calendar.JDateChooser();
+        lbTipo5 = new javax.swing.JLabel();
+        dtSalida = new com.toedter.calendar.JDateChooser();
+        lbTipo6 = new javax.swing.JLabel();
+        combEstado = new javax.swing.JComboBox<>();
+        botonCliente = new javax.swing.JButton();
+        botonHabitacion = new javax.swing.JButton();
+        lbServicio = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        tablaReservaciones = new javax.swing.JTable();
+        lbRegistros = new javax.swing.JLabel();
+        botonEliminar = new javax.swing.JButton();
+        botonSalir = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        txtBuscar = new javax.swing.JTextField();
+        botonBuscar = new javax.swing.JButton();
+        botonCompra = new javax.swing.JButton();
+        btPago = new javax.swing.JButton();
+
+        setClosable(true);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setIconifiable(true);
+        setMaximizable(true);
+        setTitle("Reservaciones");
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(50, 0, 0, 0, new java.awt.Color(102, 0, 0)), "Registro de reservaciones\n", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(102, 0, 0))); // NOI18N
+
+        lbIDServicio.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        lbIDServicio.setForeground(new java.awt.Color(0, 0, 0));
+        lbIDServicio.setText("ID reservacion:");
+
+        txtIDReservacion.setBackground(new java.awt.Color(204, 204, 204));
+        txtIDReservacion.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        txtIDReservacion.setForeground(new java.awt.Color(0, 0, 0));
+
+        lbTipo.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        lbTipo.setForeground(new java.awt.Color(0, 0, 0));
+        lbTipo.setText("Cliente:");
+
+        lbDescripcion1.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        lbDescripcion1.setForeground(new java.awt.Color(0, 0, 0));
+        lbDescripcion1.setText("Costo alojamiento:");
+
+        txtCosto.setBackground(new java.awt.Color(204, 204, 204));
+        txtCosto.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        txtCosto.setForeground(new java.awt.Color(0, 0, 0));
+
+        botonNuevo.setBackground(new java.awt.Color(204, 204, 204));
+        botonNuevo.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        botonNuevo.setForeground(new java.awt.Color(0, 0, 0));
+        botonNuevo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/files/nuevo.png"))); // NOI18N
+        botonNuevo.setText("Nuevo");
+        botonNuevo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonNuevoActionPerformed(evt);
+            }
+        });
+
+        botonGuardar.setBackground(new java.awt.Color(204, 204, 204));
+        botonGuardar.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        botonGuardar.setForeground(new java.awt.Color(0, 0, 0));
+        botonGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/files/guardar.png"))); // NOI18N
+        botonGuardar.setText("Guardar");
+        botonGuardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonGuardarActionPerformed(evt);
+            }
+        });
+
+        botonCancelar.setBackground(new java.awt.Color(204, 204, 204));
+        botonCancelar.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        botonCancelar.setForeground(new java.awt.Color(0, 0, 0));
+        botonCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/files/cancelar.png"))); // NOI18N
+        botonCancelar.setText("Cancelar");
+        botonCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonCancelarActionPerformed(evt);
+            }
+        });
+
+        txtIDCliente.setBackground(new java.awt.Color(204, 204, 204));
+        txtIDCliente.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        txtIDCliente.setForeground(new java.awt.Color(0, 0, 0));
+        txtIDCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtIDClienteActionPerformed(evt);
+            }
+        });
+
+        txtIDTrabajador.setBackground(new java.awt.Color(204, 204, 204));
+        txtIDTrabajador.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        txtIDTrabajador.setForeground(new java.awt.Color(0, 0, 0));
+        txtIDTrabajador.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtIDTrabajadorActionPerformed(evt);
+            }
+        });
+
+        lbTipo1.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        lbTipo1.setForeground(new java.awt.Color(0, 0, 0));
+        lbTipo1.setText("Trabajador:");
+
+        txtIDHabitacion.setBackground(new java.awt.Color(204, 204, 204));
+        txtIDHabitacion.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        txtIDHabitacion.setForeground(new java.awt.Color(0, 0, 0));
+        txtIDHabitacion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtIDHabitacionActionPerformed(evt);
+            }
+        });
+
+        lbTipo2.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        lbTipo2.setForeground(new java.awt.Color(0, 0, 0));
+        lbTipo2.setText(" Habitacion:");
+
+        txtNCliente.setBackground(new java.awt.Color(204, 204, 204));
+
+        txtNTrabajador.setBackground(new java.awt.Color(204, 204, 204));
+
+        txtNHabitacion.setBackground(new java.awt.Color(204, 204, 204));
+
+        dtTramite.setBackground(new java.awt.Color(204, 204, 204));
+        dtTramite.setForeground(new java.awt.Color(0, 0, 0));
+
+        lbTipo3.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        lbTipo3.setForeground(new java.awt.Color(0, 0, 0));
+        lbTipo3.setText(" Fecha de tramite:");
+
+        lbTipo4.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        lbTipo4.setForeground(new java.awt.Color(0, 0, 0));
+        lbTipo4.setText(" Fecha de Ingreso:");
+
+        dtIngreso.setBackground(new java.awt.Color(204, 204, 204));
+        dtIngreso.setForeground(new java.awt.Color(0, 0, 0));
+
+        lbTipo5.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        lbTipo5.setForeground(new java.awt.Color(0, 0, 0));
+        lbTipo5.setText(" Fecha de Salida:");
+
+        dtSalida.setBackground(new java.awt.Color(204, 204, 204));
+        dtSalida.setForeground(new java.awt.Color(0, 0, 0));
+
+        lbTipo6.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        lbTipo6.setForeground(new java.awt.Color(0, 0, 0));
+        lbTipo6.setText(" Fecha de Salida:");
+
+        combEstado.setBackground(new java.awt.Color(204, 204, 204));
+        combEstado.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        combEstado.setForeground(new java.awt.Color(0, 0, 0));
+        combEstado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Alquiler", "Pagada", "Anulada" }));
+
+        botonCliente.setBackground(new java.awt.Color(204, 204, 204));
+        botonCliente.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        botonCliente.setForeground(new java.awt.Color(0, 0, 0));
+        botonCliente.setText("....");
+        botonCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonClienteActionPerformed(evt);
+            }
+        });
+
+        botonHabitacion.setBackground(new java.awt.Color(204, 204, 204));
+        botonHabitacion.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        botonHabitacion.setForeground(new java.awt.Color(0, 0, 0));
+        botonHabitacion.setText("...");
+        botonHabitacion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonHabitacionActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(botonNuevo)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(botonGuardar)
+                        .addGap(36, 36, 36)
+                        .addComponent(botonCancelar))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lbTipo6)
+                                    .addComponent(lbDescripcion1))
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGap(16, 16, 16)
+                                        .addComponent(combEstado, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(txtCosto, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lbIDServicio)
+                                    .addComponent(lbTipo)
+                                    .addComponent(lbTipo1)
+                                    .addComponent(lbTipo2)
+                                    .addComponent(lbTipo3)
+                                    .addComponent(lbTipo4))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(dtSalida, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                .addComponent(txtIDReservacion, javax.swing.GroupLayout.DEFAULT_SIZE, 72, Short.MAX_VALUE)
+                                                .addComponent(txtIDCliente)
+                                                .addComponent(txtIDTrabajador)
+                                                .addComponent(txtIDHabitacion))
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                .addComponent(txtNTrabajador, javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                                    .addGap(0, 0, Short.MAX_VALUE)
+                                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                                            .addComponent(txtNHabitacion, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                            .addComponent(botonHabitacion, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                                            .addComponent(txtNCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                            .addComponent(botonCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                        .addComponent(dtTramite, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(dtIngreso, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(lbTipo5))
+                        .addGap(0, 22, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbIDServicio)
+                    .addComponent(txtIDReservacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbTipo)
+                    .addComponent(txtIDCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtNCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botonCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbTipo1)
+                    .addComponent(txtIDTrabajador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtNTrabajador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbTipo2)
+                    .addComponent(txtIDHabitacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtNHabitacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botonHabitacion, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(12, 12, 12)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lbTipo3)
+                    .addComponent(dtTramite, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lbTipo4)
+                    .addComponent(dtIngreso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(15, 15, 15)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lbTipo5)
+                    .addComponent(dtSalida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(21, 21, 21)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbTipo6)
+                    .addComponent(combEstado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbDescripcion1)
+                    .addComponent(txtCosto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(62, 62, 62)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(botonGuardar)
+                    .addComponent(botonNuevo)
+                    .addComponent(botonCancelar))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        lbServicio.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        lbServicio.setForeground(new java.awt.Color(102, 0, 0));
+        lbServicio.setText("Reservaciones");
+
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(50, 0, 0, 0, new java.awt.Color(102, 0, 0)), "Listado de reservaciones", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Dialog", 1, 18), new java.awt.Color(102, 0, 0))); // NOI18N
+
+        tablaReservaciones.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        tablaReservaciones.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tablaReservacionesMouseClicked(evt);
+            }
+        });
+        jScrollPane2.setViewportView(tablaReservaciones);
+
+        lbRegistros.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        lbRegistros.setForeground(new java.awt.Color(0, 0, 0));
+        lbRegistros.setText("Registros:");
+
+        botonEliminar.setBackground(new java.awt.Color(204, 204, 204));
+        botonEliminar.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        botonEliminar.setForeground(new java.awt.Color(0, 0, 0));
+        botonEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/files/eliminar.png"))); // NOI18N
+        botonEliminar.setText("Eliminar");
+        botonEliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonEliminarActionPerformed(evt);
+            }
+        });
+
+        botonSalir.setBackground(new java.awt.Color(204, 204, 204));
+        botonSalir.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        botonSalir.setForeground(new java.awt.Color(0, 0, 0));
+        botonSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/files/salir.png"))); // NOI18N
+        botonSalir.setText("Salir");
+        botonSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonSalirActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setText("Buscar por fecha:");
+
+        txtBuscar.setBackground(new java.awt.Color(204, 204, 204));
+        txtBuscar.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        txtBuscar.setForeground(new java.awt.Color(0, 0, 0));
+        txtBuscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtBuscarActionPerformed(evt);
+            }
+        });
+
+        botonBuscar.setBackground(new java.awt.Color(204, 204, 204));
+        botonBuscar.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        botonBuscar.setForeground(new java.awt.Color(0, 0, 0));
+        botonBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/files/buscar.png"))); // NOI18N
+        botonBuscar.setText("Buscar");
+        botonBuscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonBuscarActionPerformed(evt);
+            }
+        });
+
+        botonCompra.setBackground(new java.awt.Color(204, 204, 204));
+        botonCompra.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        botonCompra.setForeground(new java.awt.Color(0, 0, 0));
+        botonCompra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/files/compra.png"))); // NOI18N
+        botonCompra.setText("Compras");
+        botonCompra.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonCompraActionPerformed(evt);
+            }
+        });
+
+        btPago.setBackground(new java.awt.Color(204, 204, 204));
+        btPago.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        btPago.setForeground(new java.awt.Color(0, 0, 0));
+        btPago.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/files/pago.jpg"))); // NOI18N
+        btPago.setText("Hacer pago");
+        btPago.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btPagoActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane2)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(botonBuscar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(botonEliminar)
+                        .addGap(18, 18, 18)
+                        .addComponent(botonSalir)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(botonCompra)
+                        .addGap(18, 18, 18)
+                        .addComponent(btPago)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lbRegistros)
+                        .addGap(115, 115, 115))))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(7, 7, 7)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(botonEliminar)
+                    .addComponent(botonSalir)
+                    .addComponent(jLabel1)
+                    .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botonBuscar))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbRegistros)
+                    .addComponent(botonCompra)
+                    .addComponent(btPago))
+                .addGap(1, 1, 1))
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lbServicio)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lbServicio)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+
+        pack();
+    }// </editor-fold>//GEN-END:initComponents
+
+    private void botonNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonNuevoActionPerformed
+        habilitar();
+        botonGuardar.setText("Guardar");
+        accion = "guardar";
+    }//GEN-LAST:event_botonNuevoActionPerformed
+
+    private void botonGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonGuardarActionPerformed
+        //validamos que todos los campos de texto tengan un valor
+        if(txtIDCliente.getText().length() == 0){
+            JOptionPane.showMessageDialog(rootPane, "Debes seleccionar un cliente");
+            txtIDCliente.requestFocus();
+            return;
+        }
+        if (txtIDHabitacion.getText().length() == 0){
+            JOptionPane.showMessageDialog(rootPane, "Debes selecionar una habitacion");
+            txtIDHabitacion.requestFocus();
+            return;
+        }
+        if (txtCosto.getText().length() == 0){
+            JOptionPane.showMessageDialog(rootPane, "Debes ingresar un precio para el alojamiento");
+            txtCosto.requestFocus();
+            return;
+        }
+
+        Reservacion r = new Reservacion();
+        CReservacion cr = new CReservacion();
+        //guardamos los valores en el objeto de la clase Servicio.
+        r.setIdCliente(Integer.parseInt(txtIDCliente.getText()));
+        r.setIdTrabajador(idtrabajador);
+        r.setIdHabitacion(Integer.parseInt(txtIDHabitacion.getText()));
+        //instancia de calendar para poder recuperar las fechas de los campos correspondientes, las fechas se almacenan
+        // en un objeto de la clase Date del paquete sql en el formato year, month, day.
+        Calendar c;
+        c = dtTramite.getCalendar();
+        r.setFecha_tramite(new Date(c.get(Calendar.YEAR) - 1900, c.get(Calendar.MONTH),  c.get(Calendar.DAY_OF_MONTH)));
+        c = dtIngreso.getCalendar();
+        r.setFechaIngreso(new Date(c.get(Calendar.YEAR) - 1900, c.get(Calendar.MONTH),  c.get(Calendar.DAY_OF_MONTH)));
+        c = dtSalida.getCalendar();
+        r.setFechaSalida(new Date(c.get(Calendar.YEAR) - 1900, c.get(Calendar.MONTH),  c.get(Calendar.DAY_OF_MONTH)));
+        
+        r.setEstado(combEstado.getItemAt(combEstado.getSelectedIndex()));
+        r.setCosto(Double.parseDouble(txtCosto.getText()));
+
+        if (accion.equals("guardar")){
+            if (cr.insertar(r)){
+                JOptionPane.showMessageDialog(rootPane, "La reservacion se registro correctamente");
+                mostrar("");
+                inhabilitar();
+                //ocupar habitacion
+                CHabitacion ch = new CHabitacion();
+                Habitacion h = new Habitacion();
+                h.setIdHabitacion(Integer.parseInt(txtIDHabitacion.getText()));
+                ch.ocupar(h);
+            }
+        }else if (accion.equals("editar")){
+            r.setIdReservacion(Integer.parseInt(txtIDReservacion.getText()));
+            r.setIdTrabajador(Integer.parseInt(txtIDTrabajador.getText()));
+            if (cr.editar(r)){
+                JOptionPane.showMessageDialog(rootPane, "La reservacion se edito correctamente");
+                mostrar("");
+                inhabilitar();
+            }
+        }
+
+    }//GEN-LAST:event_botonGuardarActionPerformed
+
+    private void botonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCancelarActionPerformed
+        habilitar();
+        txtCosto.setText("");
+    }//GEN-LAST:event_botonCancelarActionPerformed
+
+    private void txtIDClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIDClienteActionPerformed
+        txtIDCliente.transferFocus();
+    }//GEN-LAST:event_txtIDClienteActionPerformed
+
+    private void tablaReservacionesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablaReservacionesMouseClicked
+        botonGuardar.setText("Editar");
+        habilitar();
+        botonEliminar.setEnabled(true);
+        accion = "editar";
+        int fila = tablaReservaciones.rowAtPoint(evt.getPoint());
+        txtIDReservacion.setText(tablaReservaciones.getValueAt(fila,0).toString());
+        txtIDCliente.setText(tablaReservaciones.getValueAt(fila,1).toString());
+        txtNCliente.setText(tablaReservaciones.getValueAt(fila,2).toString());
+        txtIDTrabajador.setText(tablaReservaciones.getValueAt(fila,3).toString());
+        txtNTrabajador.setText(tablaReservaciones.getValueAt(fila,4).toString());
+        txtIDHabitacion.setText(tablaReservaciones.getValueAt(fila,5).toString());
+        txtNHabitacion.setText(tablaReservaciones.getValueAt(fila,6).toString());
+        dtTramite.setDate(Date.valueOf(tablaReservaciones.getValueAt(fila,7).toString()));
+        dtIngreso.setDate(Date.valueOf(tablaReservaciones.getValueAt(fila,8).toString()));
+        dtSalida.setDate(Date.valueOf(tablaReservaciones.getValueAt(fila,9).toString()));
+        combEstado.setSelectedItem(tablaReservaciones.getValueAt(fila,10).toString());
+        txtCosto.setText(tablaReservaciones.getValueAt(fila,11).toString());
+    }//GEN-LAST:event_tablaReservacionesMouseClicked
+
+    private void botonEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEliminarActionPerformed
+        if(!txtIDReservacion.getText().equals("")){
+            int decision = JOptionPane.showConfirmDialog(rootPane, "Deseas eliminra la reservacion?","Confirmar",2);
+            if(decision == 0){
+                CReservacion cr = new CReservacion();
+                Reservacion r = new Reservacion();
+                r.setIdReservacion(Integer.parseInt(txtIDReservacion.getText()));
+                cr.eliminar(r);
+                mostrar("");
+                inhabilitar();
+            }
+        }
+    }//GEN-LAST:event_botonEliminarActionPerformed
+
+    private void botonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonSalirActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_botonSalirActionPerformed
+
+    private void txtIDTrabajadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIDTrabajadorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtIDTrabajadorActionPerformed
+
+    private void txtIDHabitacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIDHabitacionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtIDHabitacionActionPerformed
+
+    private void botonBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonBuscarActionPerformed
+        mostrar(txtBuscar.getText());
+    }//GEN-LAST:event_botonBuscarActionPerformed
+
+    private void txtBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBuscarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtBuscarActionPerformed
+
+    private void botonClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonClienteActionPerformed
+        FTCliente ftc = new FTCliente();
+        F.principal.add(ftc);
+        ftc.toFront();
+        ftc.setVisible(true);
+    }//GEN-LAST:event_botonClienteActionPerformed
+
+    private void botonHabitacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonHabitacionActionPerformed
+        FTHabitacion fth = new FTHabitacion();
+        F.principal.add(fth);
+        fth.toFront();
+        fth.setVisible(true);
+    }//GEN-LAST:event_botonHabitacionActionPerformed
+
+    private void botonCompraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCompraActionPerformed
+        int fila = tablaReservaciones.getSelectedRow();
+        FCompra.idReservacion =  tablaReservaciones.getValueAt(fila, 0).toString();
+        FCompra.cliente = tablaReservaciones.getValueAt(fila,2).toString();
+        
+        FCompra.idhab = tablaReservaciones.getValueAt(fila, 5).toString();
+        FCompra.nhab = tablaReservaciones.getValueAt(fila, 6).toString();
+        FCompra.fecha = tablaReservaciones.getValueAt(fila, 7).toString();
+        FCompra.totalr = Double.parseDouble(tablaReservaciones.getValueAt(fila, 11).toString());
+        
+        FCompra fc = new FCompra();
+        F.principal.add(fc);
+        fc.toFront();
+        fc.setVisible(true);
+    }//GEN-LAST:event_botonCompraActionPerformed
+
+    private void btPagoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPagoActionPerformed
+        int fila = tablaReservaciones.getSelectedRow();
+        FPago.idcompra = tablaReservaciones.getValueAt(fila, 0).toString();
+        FPago.cliente = tablaReservaciones.getValueAt(fila,2).toString();
+        FPago.idhab = tablaReservaciones.getValueAt(fila, 5).toString();
+        FPago.nhab = tablaReservaciones.getValueAt(fila, 6).toString();
+        FPago.total = Double.parseDouble(tablaReservaciones.getValueAt(fila, 11).toString());
+        
+        FPago fp = new FPago();
+        F.principal.add(fp);
+        fp.toFront();
+        fp.setVisible(true);
+    }//GEN-LAST:event_btPagoActionPerformed
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(FReservacion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(FReservacion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(FReservacion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(FReservacion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new FReservacion().setVisible(true);
+            }
+        });
+    }
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botonBuscar;
+    private javax.swing.JButton botonCancelar;
+    private javax.swing.JButton botonCliente;
+    private javax.swing.JButton botonCompra;
+    private javax.swing.JButton botonEliminar;
+    private javax.swing.JButton botonGuardar;
+    private javax.swing.JButton botonHabitacion;
+    private javax.swing.JButton botonNuevo;
+    private javax.swing.JButton botonSalir;
+    private javax.swing.JButton btPago;
+    private javax.swing.JComboBox<String> combEstado;
+    private com.toedter.calendar.JDateChooser dtIngreso;
+    private com.toedter.calendar.JDateChooser dtSalida;
+    private com.toedter.calendar.JDateChooser dtTramite;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JLabel lbDescripcion1;
+    private javax.swing.JLabel lbIDServicio;
+    private javax.swing.JLabel lbRegistros;
+    private javax.swing.JLabel lbServicio;
+    private javax.swing.JLabel lbTipo;
+    private javax.swing.JLabel lbTipo1;
+    private javax.swing.JLabel lbTipo2;
+    private javax.swing.JLabel lbTipo3;
+    private javax.swing.JLabel lbTipo4;
+    private javax.swing.JLabel lbTipo5;
+    private javax.swing.JLabel lbTipo6;
+    private javax.swing.JTable tablaReservaciones;
+    private javax.swing.JTextField txtBuscar;
+    private javax.swing.JTextField txtCosto;
+    public static javax.swing.JTextField txtIDCliente;
+    public static javax.swing.JTextField txtIDHabitacion;
+    private javax.swing.JTextField txtIDReservacion;
+    public static javax.swing.JTextField txtIDTrabajador;
+    public static javax.swing.JTextField txtNCliente;
+    public static javax.swing.JTextField txtNHabitacion;
+    public static javax.swing.JTextField txtNTrabajador;
+    // End of variables declaration//GEN-END:variables
+}
