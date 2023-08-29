@@ -114,6 +114,7 @@ Este modelo sera dividido en 2 modulos y cada uno de ellos sera administrado por
 </table>
 
 ### ESQUEMA DE INDEXADO
+
 |Nombre de la tabla|Nombre del índice|tipo|Proposito|
 |------------------|-----------------|----|---------|
 |Usuario|usuario_pk|Primary key|Identificar de manera única cada registro
@@ -158,18 +159,21 @@ Este modelo sera dividido en 2 modulos y cada uno de ellos sera administrado por
 ---
 
 ### TABLESPACES COMUNES A LOS MODULOS
+
 |Nombre|Configuracion|
 |---------------------|-------------|
 |ts_ blob|Big file, 3G, extent management local autoallocate y segment space management auto, $ORACLE_BASE/oradata/$ORACLE_SID/disk_1/ts_blob01.dbf|
 
 ### TABLESPACES POR MODULO
 <b>Modulo Usuario:</b>
+
 |Nombre|Objetivo|Tipo|Configuracion|
 |------|--------|----|-------------|
 |ts_usuario|Almacenar datos sobre las tablas|permanente|Small file (un datafile), de 250M auto extendible hasta 500M, extent management local autoallocate y segment space management auto, $ORACLE_BASE/oradata/$ORACLE_SID/disk_2/usuariots.dbf|
 |ts_usuario_index|Guardar en un ts dedicado los índices del módulo|permanente|Small file (un datafile),  de 100M auto extendible hasta 300M, extent management local autoallocate y segment space management auto, $ORACLE_BASE/oradata/$ORACLE_SID/disk_2/usuarioidxts.dbf|
 
 <b>Modulo BIblioteca</b>
+
 |Nombre|Objetivo|Tipo|Configuracion|
 |------|--------|----|-------------|
 |ts_biblioteca|Almacenar datos sobre las tablas|permanente|Big file, de 500M auto extendible hasta 3GB, extent management local autoallocate y segment space management auto, $ORACLE_BASE/oradata/$ORACLE_SID/disk_3/usuariots.dbf
@@ -177,6 +181,7 @@ Este modelo sera dividido en 2 modulos y cada uno de ellos sera administrado por
 
 ### ASIGNACION DE TABLESPACES PARA TABLAS DE CADA MODULO
 <b>Modulo Usuario:</b>
+
 |Tabla|Tablesapce|
 |-----|----------|
 |Usario|ts_usuario|
@@ -184,6 +189,7 @@ Este modelo sera dividido en 2 modulos y cada uno de ellos sera administrado por
 |Libro_prestamo|ts_usuario|
 
 <b>Modulo BIblioteca</b>
+
 |Tabla|Tablesapce|
 |-----|----------|
 |Biblioteca|ts_biblioteca|
@@ -202,6 +208,7 @@ Este modelo sera dividido en 2 modulos y cada uno de ellos sera administrado por
 
 ### ASIGNACION DE TABLESPACES PARA INDICES DE CADA MODULO
 <b>Modulo Usuario:</b>
+
 |Nombre del índice|Tipo de indice|Nombre de la tabla|Nombre de la columna|Nombre del tablespace|
 |-----------------|--------------|------------------|--------------------|---------------------|
 |usuario_pk|Primary key|Usuario|usuario_id|ts_usuario_index|
@@ -213,6 +220,7 @@ Este modelo sera dividido en 2 modulos y cada uno de ellos sera administrado por
 |libro_prestamo_recurdo_id_fk|Foreing key|Libro_prestamo|recurso_id|ts_usuario_index|
 
 <b>Modulo BIblioteca</b>
+
 |Nombre del índice|Tipo de indice|Nombre de la tabla|Nombre de la columna|Nombre del tablespace|
 |-----------------|--------------|------------------|--------------------|---------------------|
 |biblioteca_pk|Primary key|Biblioteca|biblioteca_id|ts_biblioteca_index
@@ -248,11 +256,13 @@ Este modelo sera dividido en 2 modulos y cada uno de ellos sera administrado por
 
 ### ASIGNACION DE TABLESPACES PARA COLUMNAS CLOB/BLOB DE CADA MODULO
 <b>Modulo Usuario:</b>
+
 |Nombre de la columna clob/blob|Nombre del índice asociado a la columna clob/blob|Nombre de la tabla|Nombre del tablespace para la columna clob/blob|Nombre del tablespace para el índice de la columna clob/blob|
 |-----------|---------|------------|-------------|---------------|
 |foto|usuario_foto_idx|Usuario|ts_blob|ts_usario_index|
 
 <b>Modulo BIblioteca</b>
+
 |Nombre de la columna clob/blob|Nombre del índice asociado a la columna clob/blob|Nombre de la tabla|Nombre del tablespace para la columna clob/blob|Nombre del tablespace para el índice de la columna clob/blob|
 |-----------|---------|------------|-------------|---------------|
 |PDF|libro_pdf_idx|Libro|ts_blob|ts_bibliteca_index|
