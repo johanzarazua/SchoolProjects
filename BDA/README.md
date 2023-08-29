@@ -1,4 +1,4 @@
-**PROYECTO BDA.**
+**PROYECTO BDA. (Bases de datos avanzadas)**
 ==
 
 En estre proyecto se realiza la creación de una base de datos desde consola con
