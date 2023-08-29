@@ -43,7 +43,7 @@ Cada usuario cuenta con su consecutivo de préstamos iniciando en 1.
 Este modelo sera dividido en 2 modulos y cada uno de ellos sera administrado por un usuario particular
 |Modulo|Descripción|Usuario|
 |------|-----------|-------|
-|Usuario|Objetos y funcionalidades relacionadas a los usuarios y sus préstamos|heza_usuario
+|Usuario|Objetos y funcionalidades relacionadas a los usuarios y sus préstamos|heza_usuario|
 |Biblioteca|Objetos y funcionalidades relacionadas a las bibliotecas, áreas de conocimiento, recursos y status del recurso|heza_biblioteca|
 
 ![Modulos](Modulos.png)
